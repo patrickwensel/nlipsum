@@ -1,4 +1,5 @@
 #summary How to Use NLipsum
+#labels Featured,Phase-Implementation
 
 = Introduction =
 Below are examples of how one might use NLipsum.  
@@ -6,18 +7,24 @@ If you download the Subversion source there is an Example web site with these ex
 
 == A Single Sentence == 
 *Note:* The "GenerateSentences" and "GenerateParagraphs" methods return string arrays.
-Code: {{{
+
+Code: 
+{{{
 NLipsum.Core.LipsumGenerator.GenerateSentences(1)[0]
 }}}
-Output: {{{
+Output: 
+{{{
 magna eos consectetuer lorem diam et et vulputate 
 }}}
 === Formatting ===
 _Use the sentence as a header_
-Code: {{{
+
+Code: 
+{{{
 generator.GenerateSentences(1, "&lt;h3&gt;{0}&lt;/h3&gt;")[0] 
 }}}
-Output: {{{
+Output: 
+{{{
 <h3>no elitr vel takimata lorem voluptua</h3> 
 }}}
 
