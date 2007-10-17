@@ -4,7 +4,7 @@
 Below are examples of how one might use NLipsum.  
 If you download the [http://code.google.com/p/nlipsum/source/ Subversion source] there is an Example web site with these examples in action and some more detailed documentation.
 
-*This document and the example site are both a work in progress and are not completely finished.*
+*This document and the example site are both a work in progress and are not finished.*
 
 == A Single Sentence == 
 *Note:* The `GenerateSentences` and `GenerateParagraphs` methods return string arrays.
