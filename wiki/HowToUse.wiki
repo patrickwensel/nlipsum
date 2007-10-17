@@ -29,7 +29,7 @@ Output:
 }}}
 
 == Web Page Filler Text ==
-You can embed this into a Web Form (.aspx) page to have the Html generated right inside your page.  
+You can embed this into a Web Form (.aspx) page to have the Html generated right inside your page using the static LipsumGenerator.GenerateHtml method.
 {{{
  <h1>Html Lipsum</h1>
  <div><%= NLipsum.Core.LipsumGenerator.GenerateHtml(3) %></div>
