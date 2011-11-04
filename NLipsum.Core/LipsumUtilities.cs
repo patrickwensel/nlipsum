@@ -65,7 +65,12 @@ namespace NLipsum.Core {
 		/// <param name="source">The array from which to retrieve a random element.</param>
 		/// <returns></returns>
 		public static string RandomElement(string[] source) {
-			return source[RandomInt(0, source.Length - 1)];
+            int max = source.Length - 1;
+            if (source.Length < 1)
+            {
+                max = 1;
+            }
+			return source[RandomInt(0, max)];
 		}
 
 		#endregion

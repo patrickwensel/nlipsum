@@ -18,7 +18,9 @@ namespace NLipsum.Core {
 		/// <summary>
 		/// Instantiates a LipsumGenerator.
 		/// </summary>
-		public LipsumGenerator() { }
+		public LipsumGenerator() {
+            LipsumText = new StringBuilder(Lipsums.LoremIpsum);
+        }
 
 		/// <summary>
 		/// Instantiates a LipsumGenerator with the passed data.
