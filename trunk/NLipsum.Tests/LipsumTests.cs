@@ -92,6 +92,32 @@ namespace NLipsum.Tests {
 			Assert.AreEqual(desiredSentence, generatedSentences[0]);
 		}
 
+        [Test]
+        public void Test_DefaultConstructor_LoadsLoremIpsum()
+        {
+            var lipsum = new LipsumGenerator();
+            string x = lipsum.LipsumText.ToString();
+            string y = Lipsums.LoremIpsum.ToString();
+            StringAssert.Equals(x, y);
+        }
+
+        [Test]
+        public void TestSingleSentence_DoesNotThrow_ArgumentOutOfRangeException()
+        {
+            // From reported issue: http://code.google.com/p/nlipsum/issues/detail?id=3
+            var lipsum = new LipsumGenerator();
+            bool hasThrownArgException = false;
+            try
+            {
+                lipsum.GenerateSentences(1, Sentence.Short);
+            }
+            catch (ArgumentException ex)
+            {
+                hasThrownArgException = true;
+            }
+            Assert.IsFalse(hasThrownArgException);
+        }
+
 		#endregion
 
 		#region Paragraphs
@@ -201,5 +227,6 @@ namespace NLipsum.Tests {
 		 * I realize there are some tests lacking
 		 * Feel free to write them.
 		 */
+
 	}
 }
